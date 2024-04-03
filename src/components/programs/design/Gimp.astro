@@ -1,0 +1,17 @@
+---
+import Program from "../../../layouts/ProgramCard.astro";
+const { row } = Astro.props
+---
+
+<Program
+  row={row}
+  title="GIMP"
+  platforms='Linux, MacOS, Windows'
+  category="Diseño"
+  description="Retoque fotográfico, composición de imágenes y creación de imágenes. GIMP ofrece gran cantidad de filtros y efectos de imagen. Soporta formatos de imagen como: JPG, PNG, JPEG, TIFF, entre otros."
+  website="https://www.gimp.org/"
+>
+
+  <i class="big-icon nf nf-linux-gimp"></i>
+
+</Program>

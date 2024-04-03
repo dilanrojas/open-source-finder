@@ -1,0 +1,79 @@
+---
+const { title, description, details, row } = Astro.props
+---
+
+<div class="card" data-flex={row}?>
+  <div class="flex-columns container">
+    <div class="text">
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <p class="text-gray">{details}</p>
+    </div>
+    <div class="image">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+  .flex-columns {
+    display: flex;
+  }
+
+  .flex-columns > * {
+    padding: 2em;
+  }
+
+  .card {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-color: var(--clr-card-bg-primary);
+  }
+
+  .card[data-flex="row-reverse"] {
+    background-color: var(--clr-card-bg-secondary);
+  }
+
+  .card[data-flex="row-reverse"] .flex-columns {
+    flex-direction: row-reverse;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    max-width: 90ch;
+  }
+
+  .image {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-weight: var(--fw-semibold);
+    color: var(--clr-card-accent);
+    font-size: var(--fs-750);
+  }
+
+  p {
+    color: var(--clr-card-text-primary);
+    font-size: var(--fs-450);
+  }
+
+  .text-gray {
+    font-size: var(--fs-400);
+    color: var(--clr-card-text-secondary);
+  }
+
+  @media(width <= 850px) {
+    .flex-columns {
+      flex-direction: column;
+    }
+    .card[data-flex="row-reverse"] .flex-columns {
+      flex-direction: column-reverse;
+    }
+  }
+</style>

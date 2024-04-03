@@ -1,0 +1,17 @@
+---
+import Distro from "../../layouts/DistroCard.astro";
+const { row } = Astro.props
+---
+
+<Distro
+  row={row}
+  title="Linux Mint"
+  base="Ubuntu"
+  user="Usuario promedio"
+  description="Provee un sistema operativo moderno, elegante y cómodo que sea tanto poderoso como fácil de usar, además de estar equipado con las aplicaciones que la mayoría de las personas necesita."
+  website="https://linuxmint.com/"
+>
+
+  <i class="big-icon nf nf-md-linux_mint"></i>
+
+</Distro>

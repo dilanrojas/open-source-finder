@@ -1,0 +1,18 @@
+---
+import Program from "../../../layouts/ProgramCard.astro";
+import MidoriIcon from "../../icons/MidoriIcon.astro";
+const { row } = Astro.props
+---
+
+<Program
+  row={row}
+  title="Midori"
+  platforms='Linux, Android y Windows'
+  category="Navegadores web"
+  description="Navegador ligero y minimalista que se enfoca en la velocidad y la eficiencia. Es una opción popular para sistemas con recursos limitados."
+  website="https://astian.org/midori-browser/"
+>
+
+  <MidoriIcon />
+
+</Program>

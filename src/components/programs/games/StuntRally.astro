@@ -1,0 +1,27 @@
+---
+import Program from "../../../layouts/ProgramCard.astro";
+const { row } = Astro.props
+---
+
+<Program
+  row={row}
+  title="Stunt Rally"
+  platforms='Linux y Windows'
+  category="Juegos"
+  description="Un juego de carreras de rally en 3D con una amplia variedad de pistas, vehículos y modos de juego"
+  website="https://stuntrally.tuxfamily.org/"
+>
+
+  <h1>SR</h1>
+
+</Program>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+  h1 {
+    font-family: "Indie Flower", cursive;
+    font-size: var(--size-700);
+    color: var(--clr-card-accent);
+  }
+</style>

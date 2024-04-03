@@ -1,0 +1,17 @@
+---
+import Distro from "../../layouts/DistroCard.astro";
+const { row } = Astro.props
+---
+
+<Distro
+  row={row}
+  title="Debian"
+  base="Independiente"
+  user="Usuario Intermedio"
+  description="Su base de voluntarios, su naturaleza no comercial y su modelo de desarrollo abierto la distingue de otras distribuciones."
+  website="https://www.debian.org/"
+>
+
+  <i class="big-icon nf nf-dev-debian"></i>
+
+</Distro>

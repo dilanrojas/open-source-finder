@@ -1,0 +1,155 @@
+<header class="header">
+  <div class="nav-wrapper container" style="--custom-width: 1600px; --custom-padding: 1.8rem">
+    <div class="logo-wrapper">
+      <a href="/">
+        <i class="fa-solid fa-circle-nodes"></i>
+        <h1>OSF</h1>
+      </a>
+    </div>
+    <nav class="pm-nav">
+      <ul class="pm-nav-list">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/programs">Programas</a></li>
+        <li><a href="/gnulinux">GNU/Linux</a></li>
+        <li><button id="theme-toggle">
+          <i class="light fa-regular fa-sun"></i>
+          <i class="dark fa-regular fa-moon"></i>
+        </button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    background-image: var(--clr-bg-gradient);
+    box-shadow: 0px 3px 10px rgba(2, 27, 44, 0.2);
+    color: var(--clr-neutral-100);
+    position: fixed;
+    width: 100%;
+    z-index: 40;
+  }
+
+  .nav-wrapper {
+    display: flex;
+  }
+
+  .logo-wrapper {
+    margin-right: auto;
+  }
+
+  .logo {
+    color: var(--clr-text-heading);
+  }
+
+  .logo-wrapper a {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    height: 100%;
+  }
+
+  .logo-wrapper h1 {
+    font-size: var(--fs-600);
+  }
+
+  .logo-wrapper i {
+    font-size: var(--fs-650);
+  }
+
+  nav li {
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+
+  nav a {
+    display: flex;
+    align-items: center;
+    padding: .5em 1em;
+    font-size: var(--fs-450);
+    color: var(--clr-text-heading)
+  }
+
+  nav a:hover {
+    background-color: var(--clr-heading-accent);
+    border-radius: var(--rounded-20);
+  }
+
+  #theme-toggle:hover {
+    background-color: var(--clr-heading-accent);
+    border-radius: var(--rounded-20);
+  }
+
+  #theme-toggle {
+    width: 2.5em;
+    height: 2.35em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background-color: transparent;
+    color: var(--clr-text-heading);
+    font-size: var(--fs-500);
+
+    i:first-child {
+      display: block;
+    }
+
+    i:last-child {
+      display: none
+    }
+  }
+
+  #theme-toggle[dark] {
+
+    i:first-child {
+      display: none;
+    }
+
+    i:last-child {
+      display: block;
+    }
+  }
+
+  .pm-nav-list {
+    display: flex;
+    align-items: center;
+  }
+  
+</style>
+
+<script>
+  let darkMode = localStorage.getItem('darkMode')
+  const body = document.querySelector('body')
+  const darkModeToggle = document.querySelector('#theme-toggle')
+
+  function enableDark() {
+    body.setAttribute("dark-mode", "");
+    darkModeToggle.setAttribute("dark", "");
+    localStorage.setItem("darkMode", "enabled")
+  }
+
+  function disableDark() {
+    body.removeAttribute("dark-mode")
+    darkModeToggle.removeAttribute("dark")
+    localStorage.setItem("darkMode", null)
+  }
+
+  if (darkMode === "enabled") {
+    enableDark()
+    console.log("hey")
+  }
+
+  darkModeToggle.addEventListener("click", () => {
+
+    darkMode = localStorage.getItem("darkMode")
+
+    if (darkMode !== "enabled") {
+      enableDark();
+    } else {
+      disableDark();
+    }
+  })
+</script>

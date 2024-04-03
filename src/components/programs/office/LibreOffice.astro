@@ -1,0 +1,24 @@
+---
+import Program from "../../../layouts/ProgramCard.astro";
+const { row } = Astro.props
+---
+
+<Program
+  row={row}
+  title="LibreOffice"
+  platforms='Linux, MacOS, Windows'
+  category="Ofimática"
+  description="Sus herramientas permiten liberar tu creatividad y hacer crecer tu productividad. LibreOffice incluye varias aplicaciones que lo convierten en el paquete de oficina libre y abierto más eficaz del mercado."
+  website="https://www.libreoffice.org/"
+>
+
+  <i class="nf nf-md-file_document"></i>
+
+</Program>
+
+<style>
+  i {
+    font-size: var(--size-800);
+    color: var(--clr-accent-800);
+  }
+</style>

@@ -1,0 +1,18 @@
+---
+import Program from "../../../layouts/ProgramCard.astro";
+import VivaldiIcon from "../../icons/VivaldiIcon.astro";
+const { row } = Astro.props
+---
+
+<Program
+  row={row}
+  title="Vivaldi"
+  platforms='Linux, MacOS, Android, Windows y iOS'
+  category="Navegadores web"
+  description="Alta personalización y una variedad de características avanzadas, como agrupar pestañas, tomar notas directamente en el navegador y la sincronización entre dispositivos."
+  website="https://vivaldi.com/"
+>
+
+  <VivaldiIcon />
+
+</Program>

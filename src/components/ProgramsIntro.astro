@@ -1,0 +1,25 @@
+---
+import IntroContent from "./IntroContent.astro"
+---
+
+<section class="programs-intro">
+  <div style="margin-top: bottom; min-height: 3em;" id="go-up"></div>
+  <IntroContent
+    title="¿Qué estás buscando?"
+    paragraph="Encuentra el mejor software aquí"
+    button="Ver programas"
+  >
+  </IntroContent>
+  <div style="margin-top: auto; min-height: 3em;" id="go-down"></div>
+</section>
+
+<style>
+  .programs-intro {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--clr-bg-gradient);
+    height: 45em;
+  }
+</style>

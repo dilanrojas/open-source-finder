@@ -1,0 +1,17 @@
+---
+import Distro from "../../layouts/DistroCard.astro";
+const { row } = Astro.props
+---
+
+<Distro
+  row={row}
+  title="Ubuntu"
+  base="Debian"
+  user="Usuario promedio"
+  description="Ya sea que lo utilices en el hogar, en la escuela o en el trabajo, Ubuntu contiene todas las aplicaciones que puedas necesitar, desde procesadores de texto y aplicaciones de email, hasta software para servidor web y herramientas de programación."
+  website="https://ubuntu.com/"
+>
+
+  <i class="big-icon nf nf-dev-ubuntu"></i>
+
+</Distro>

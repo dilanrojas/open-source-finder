@@ -1,0 +1,17 @@
+---
+import Program from "../../../layouts/ProgramCard.astro";
+const { row } = Astro.props
+---
+
+<Program
+  row={row}
+  title="Mozilla Firefox"
+  platforms='Linux, MacOS, Android, Windows y iOS'
+  category="Navegadores web"
+  description="Navegador web versátil, seguro y altamente personalizable que ofrece una experiencia de navegación rápida y centrada en la privacidad."
+  website="https://www.mozilla.org/"
+>
+
+  <i class="big-icon nf nf-md-firefox"></i>
+
+</Program>

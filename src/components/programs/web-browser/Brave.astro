@@ -1,0 +1,17 @@
+---
+import Program from "../../../layouts/ProgramCard.astro";
+const { row } = Astro.props
+---
+
+<Program
+  row={row}
+  title="Brave"
+  platforms='Linux, MacOS, Android, Windows y iOS'
+  category="Navegadores web"
+  description="Centrado en la privacidad que bloquea los anuncios y rastreadores por defecto. También tiene una función de recompensas que permite a los usuarios ganar tokens por ver anuncios opcionales."
+  website="https://brave.com/"
+>
+
+  <i class="big-icon fa-brands fa-brave"></i>
+
+</Program>

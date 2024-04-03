@@ -1,0 +1,18 @@
+---
+import Program from "../../../layouts/ProgramCard.astro";
+import SuperTuxKartIcon from "../../icons/SuperTuxKartIcon.astro";
+const { row } = Astro.props
+---
+
+<Program
+  row={row}
+  title="SuperTuxKart"
+  platforms='Linux, MacOS, Android, Windows y Switch Homebrew'
+  category="Juegos"
+  description="Un juego de carreras de karts en 3D, similar a Mario Kart, con personajes y circuitos originales."
+  website="https://supertuxkart.net/Main_Page"
+>
+
+  <SuperTuxKartIcon />
+
+</Program>

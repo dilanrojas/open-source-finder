@@ -1,0 +1,17 @@
+---
+import Distro from "../../layouts/DistroCard.astro";
+const { row } = Astro.props
+---
+
+<Distro
+  row={row}
+  title="Zorin OS"
+  base="Ubuntu"
+  user="Usuario promedio"
+  description="Uno de los objetivos de esta distribución es intentar, desde un primer momento, brindarle al usuario una interfaz gráfica amigable y similar a la de Windows."
+  website="https://zorin.com/os/"
+>
+
+  <i class="big-icon nf nf-linux-zorin"></i>
+
+</Distro>

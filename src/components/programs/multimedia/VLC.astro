@@ -1,0 +1,17 @@
+---
+import Program from "../../../layouts/ProgramCard.astro";
+const { row } = Astro.props
+---
+
+<Program 
+  row={row}
+  title="VLC"
+  platforms='Linux, MacOS, Android, Windows y iOS'
+  category="Multimedia"
+  description="Capaz de reproducir casi cualquier formato de vídeo sin necesidad de instalar códecs externos y puede reproducir vídeos en formatos DVD, Bluray, a resoluciones normales, en alta definición o incluso en ultra alta definición o 4K."
+  website="https://www.videolan.org/vlc/"
+>
+
+  <i class="big-icon nf nf-md-vlc"></i>
+
+</Program>

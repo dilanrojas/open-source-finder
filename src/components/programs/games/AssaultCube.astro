@@ -1,0 +1,18 @@
+---
+import Program from "../../../layouts/ProgramCard.astro";
+import AssaultCubeIcon from "../../icons/AssaultCubeIcon.astro";
+const { row } = Astro.props
+---
+
+<Program
+  row={row}
+  title="AssaultCube"
+  platforms='Linux, MacOS y Windows'
+  category="Juegos"
+  description="Es un juego de disparos en primera persona de código abierto, multiplataforma y de ritmo rápido. Combina gráficos simples pero efectivos con una jugabilidad rápida y dinámica."
+  website="https://assault.cubers.net/"
+>
+
+  <AssaultCubeIcon />
+
+</Program>
