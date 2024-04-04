@@ -12,14 +12,12 @@
         <li><a href="/">Inicio</a></li>
         <li><a href="/programs">Programas</a></li>
         <li><a href="/gnulinux">GNU/Linux</a></li>
-        <li>
-          <button id="theme-toggle">
-            <i class="light fa-regular fa-sun"></i>
-            <i class="dark fa-regular fa-moon"></i>
-          </button>
-        </li>
       </ul>
     </nav>
+    <button id="theme-toggle">
+      <i class="light fa-regular fa-sun"></i>
+      <i class="dark fa-regular fa-moon"></i>
+    </button>
     <div class="hamburguer mobile-nav-toggle">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -42,6 +40,7 @@
 
   .nav-wrapper {
     display: flex;
+    align-items: center;
   }
 
   .logo-wrapper {
@@ -93,7 +92,7 @@
 
   #theme-toggle {
     width: 2.5em;
-    height: 2.35em;
+    height: 2em;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -101,7 +100,7 @@
     border: 0;
     background-color: transparent;
     color: var(--clr-text-heading);
-    font-size: var(--fs-500);
+    font-size: var(--size-100);
 
     i:first-child {
       display: block;
@@ -113,7 +112,6 @@
   }
 
   #theme-toggle[dark] {
-
     i:first-child {
       display: none;
     }
@@ -129,30 +127,28 @@
   }
 
   .hamburguer {
-    width: 3em;
+    width: 4.5em;
+    height: 2.8em;
     cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     flex-direction: column;
     gap: .5em;
     z-index: 90;
     display: none;
   }
 
+  .hamburguer:hover {
+    background-color: var(--clr-heading-accent);
+    border-radius: var(--rounded-20);
+  }
+
   .hamburguer .bar {
     background-color: var(--clr-text-heading);
     transition: transform .2s ease;
     border-radius: var(--rounded-20);
-  }
-
-  .hamburguer .bar:first-child {
-    min-width: 45px;
-    min-height: 4px;
-  }
-
-  .hamburguer .bar:last-child {
-    min-width: 30px;
+    min-width: 35px;
     min-height: 4px;
   }
 
@@ -185,6 +181,10 @@
       transition: right .2s ease;
     }
 
+    #theme-toggle {
+      z-index: 90;
+    }
+
     .hamburguer {
       display: flex;
     }
@@ -199,13 +199,6 @@
 
     .pm-nav-list a {
       width: 100%;
-    }
-
-    #theme-toggle {
-      width: 100%;
-      padding-left: 1em;
-      justify-content: start;
-      height: 2.2em;
     }
 
     html[data-overlay] {
