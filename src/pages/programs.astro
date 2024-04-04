@@ -1,8 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
 import ProgramsIntro from '../components/ProgramsIntro.astro';
-import Footer from '../components/Footer.astro';
 import Gimp from '../components/programs/design/Gimp.astro';
 import AssaultCube from '../components/programs/games/AssaultCube.astro';
 import StuntRally from '../components/programs/games/StuntRally.astro';
@@ -18,8 +16,6 @@ import Vivaldi from '../components/programs/web-browser/Vivaldi.astro';
 <Layout title="Open Source Finder">
 	<main>
 
-		<Header />
-
 		<ProgramsIntro />
 
 		<Gimp />
@@ -32,8 +28,6 @@ import Vivaldi from '../components/programs/web-browser/Vivaldi.astro';
 		<Firefox row="row-reverse" />
 		<Midori />
 		<Vivaldi row="row-reverse" />
-
-		<Footer />
 
 	</main>
 </Layout>
