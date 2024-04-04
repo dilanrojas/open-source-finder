@@ -11,7 +11,9 @@ const { title, base, user, latest, description, website, row } = Astro.props
         <p><strong>Adecuado para: </strong>{user} <i class="fa-solid fa-user"></i></p>
       </div>
       <p>{description}</p>
-      <p class="website"><a target="_blank" href={website}>Ir al sitio oficial de {title}</a>
+      <p class="website"><a target="_blank" href={website}>
+        <button>Ir al sitio oficial</button>
+      </a></p>
       </p>
     </div>
     <div class="image">
@@ -23,6 +25,7 @@ const { title, base, user, latest, description, website, row } = Astro.props
 <style>
   .flex-columns {
     display: flex;
+    gap: var(--size-600)
   }
 
   .flex-columns > * {
@@ -47,7 +50,7 @@ const { title, base, user, latest, description, website, row } = Astro.props
     display: flex;
     flex-direction: column;
     gap: 2.5em;
-    max-width: 90ch;
+    max-width: 85ch;
   }
 
   .details i {
@@ -70,6 +73,22 @@ const { title, base, user, latest, description, website, row } = Astro.props
   p {
     color: var(--clr-card-text-primary);
     font-size: var(--fs-450);
+  }
+
+  button {
+    cursor: pointer;
+    border: 1px solid var(--clr-card-accent);
+    background-color: transparent;
+    padding: .5em 1em;
+    font-size: var(--fs-450);
+    color: var(--clr-card-accent);
+    border-radius: var(--rounded-20);
+    transition: background-color .1s ease, color .1s ease;
+  }
+
+  button:hover {
+    background-color: var(--clr-card-accent);
+    color: var(--clr-button-accent);
   }
 
   .website {
