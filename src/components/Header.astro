@@ -251,7 +251,6 @@
   const toggleSidebar = document.querySelector('.mobile-nav-toggle')
   const sidebar = document.querySelector('.pm-nav-list')
   const dimBackground = document.querySelector(".dim-background")
-  const html = document.querySelector("html")
 
   toggleSidebar.addEventListener("click", () => {
     sidebar.classList.toggle("active")
@@ -265,7 +264,6 @@
         dimBackground.removeAttribute("closing")
       })
     }
-    html.toggleAttribute("data-overlay")
   })
 
   function enableDark() {
