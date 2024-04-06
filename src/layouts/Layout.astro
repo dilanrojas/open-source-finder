@@ -63,8 +63,8 @@ const { title } = Astro.props;
 		--clr-card-bg-primary: var(--clr-accent-100);
 		--clr-card-bg-secondary: var(--clr-accent-200);
 
-		--clr-bg-footer: var(--clr-accent-100);
-		--clr-footer-accent: var(--clr-accent-700);
+		--clr-bg-footer: rgb(240, 240, 240);
+		--clr-footer-accent: var(--clr-accent-500);
 		--clr-text-footer: var(--clr-neutral-600);
 		
 		--clr-bg-gradient: linear-gradient(to left, var(--clr-accent-400), var(--clr-accent-700));
@@ -121,7 +121,7 @@ const { title } = Astro.props;
 		--clr-card-accent: var(--clr-accent-300);
 		--clr-button-accent: var(--clr-neutral-900);
 
-		--clr-bg-footer: var(--clr-accent-900);
+		--clr-bg-footer: rgb(1, 12, 19);
 		--clr-footer-accent: var(--clr-accent-300);
 		--clr-text-footer: var(--clr-neutral-400);
 
@@ -227,5 +227,13 @@ const { title } = Astro.props;
 
 	.intro-content {
 		animation: slideIn 800ms forwards;
+	}
+
+	.intro-section {
+    transition: background .15s ease, color .15s ease;
+	}
+
+	.card {
+    transition: background .15s ease, color .15s ease;
 	}
 </style>

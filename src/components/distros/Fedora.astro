@@ -1,0 +1,17 @@
+---
+import Distro from "../../layouts/DistroCard.astro";
+const { row } = Astro.props
+---
+
+<Distro
+  row={row}
+  title="Fedora"
+  base="Red Hat Enterprise Linux"
+  user="Usuario intermedio"
+  description="Sistema estable, la cual es mantenida gracias a una comunidad internacional de ingenieros, diseñadores gráficos y usuarios que informan de fallos y prueban nuevas tecnologías. Cuenta con el respaldo y la promoción de Red Hat (una subsidiaria de IBM)."
+  website="https://fedoraproject.org/es/"
+>
+
+  <i class="big-icon fa-brands fa-fedora"></i>
+
+</Distro>
