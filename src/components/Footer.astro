@@ -1,0 +1,64 @@
+<footer>
+  <div class="footer-wrapper container flow" style="--flow-space: 1.7em; --custom-padding: 1.8rem">
+      <h1>"La libertad para ejecutar el programa con cualquier propósito"</h1>
+      <p>
+        Open Source Finder es un sitio web creado por
+        <a target="_blank" href="https://github.com/dilanrojas">Dilan Rojas</a>
+        y su código se encuentra en
+        <a target="_blank" href="https://github.com/dilanrojas/open-source-finder"><i class="fa-brands fa-github"></i> GitHub</a>
+      </p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-bg-footer);
+    height: 200px;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 55ch;
+  }
+
+  h1 {
+    color: var(--clr-footer-accent);
+    font-size: var(--fs-550);
+    font-weight: var(--fw-semibold);
+    text-align: center;
+  }
+
+  p {
+    color: var(--clr-text-footer);
+    text-align: center;
+  }
+
+  a {
+    border-bottom: 1.5px solid var(--clr-text-footer);
+    transition: border-bottom .2s ease;
+  }
+
+  a:hover {
+    border-bottom: 1.5px solid var(--clr-footer-accent);
+  }
+
+</style>
+
+<script>
+  window.addEventListener("scroll", () => {
+    var element = document.querySelector(".footer-wrapper")
+    var position = element.getBoundingClientRect()
+
+    if (position.top < window.innerHeight && position.bottom >= 0) {
+      element.classList.add("visible")
+    } else {
+      element.classList.remove("visible")
+    }      
+  })
+</script>

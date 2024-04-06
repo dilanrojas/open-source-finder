@@ -2,7 +2,7 @@
 const { title, paragraph, button } = Astro.props
 ---
 
-<div class="content container" style="--custom-padding: 3rem;">
+<div class="content intro-content container" style="--custom-padding: 3rem;">
   <h1>{title}</h1>
   <p>{paragraph}</p>
   <a href="#go-down">
@@ -21,7 +21,6 @@ const { title, paragraph, button } = Astro.props
     gap: 1.5em;
     color: var(--clr-neutral-100);
     z-index: 20;
-    animation: fadeIn 900ms ease;
   }
 
   h1 {

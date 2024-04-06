@@ -3,7 +3,7 @@ const { title, base, user, latest, description, website, row } = Astro.props
 ---
 
 <div class="card" data-flex={row}?>
-  <div class="flex-columns container">
+  <div class="flex-columns container card-content">
     <div class="text">
       <h1>{title}</h1>
       <div class="details">
@@ -108,3 +108,19 @@ const { title, base, user, latest, description, website, row } = Astro.props
     }
   }
 </style>
+
+<script>
+  window.addEventListener("scroll", () => {
+    var element = document.querySelectorAll(".card-content")
+
+    element.forEach(element => {
+      var position = element.getBoundingClientRect()
+      if (position.top < window.innerHeight && position.bottom >= 0) {
+      element.classList.add("visible")
+    } else {
+      element.classList.remove("visible")
+    }      
+    });
+
+  })
+</script>
