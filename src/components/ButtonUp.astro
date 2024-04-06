@@ -1,0 +1,56 @@
+<button class="toTop">
+  <i class="fa-solid fa-angles-up"></i>
+</button>
+
+<style>
+  button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0;
+    color: var(--clr-accent-700);
+    padding: 1em;
+    border-radius: var(--rounded-30);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 30;
+    background-color: var(--clr-accent-300);
+    margin-right: 1em;
+    margin-bottom: 1em;
+    transition: background .1s ease, color .1s ease;
+    font-size: var(--fs-450);
+  }
+
+  button:hover {
+    background-color: var(--clr-accent-400);
+    color: var(--clr-accent-200);
+  }
+
+  button.active {
+    display: flex;
+    animation: fadeIn 300ms forwards;
+  }
+
+</style>
+
+<script>
+  const toTop = document.querySelector(".toTop");
+
+  window.addEventListener("scroll", () => {
+    if(window.scrollY > 400) {
+      toTop.classList.add("active")
+    } else {
+      toTop.classList.remove("active")
+    }
+  })
+
+  toTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  })
+
+</script>

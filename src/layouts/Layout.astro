@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BackToTop from '../components/ButtonUp.astro';
 
 interface Props {
 	title: string;
@@ -20,10 +21,12 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+
 		<Header />
 		<slot />
-
+		<BackToTop />
 		<Footer />
+
 		<script src="https://kit.fontawesome.com/92992ef526.js" crossorigin="anonymous"></script>
 	</body>
 </html>
@@ -100,6 +103,7 @@ const { title } = Astro.props;
 		--rounded-10: 10px;
 		--rounded-15: 15px;
 		--rounded-20: 20px;
+		--rounded-30: 30px;
 
 		--size-100: 1.45em;
 		--size-200: 2em;
