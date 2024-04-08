@@ -3,8 +3,8 @@ const { title, category, platforms, description, website, row } = Astro.props
 ---
 
 <div class="card" data-flex={row}?>
-  <div class="flex-columns container card-content">
-    <div class="text">
+  <div class="flex-columns container">
+    <div class="text scroll-element">
       <h1>{title}</h1>
       <div class="details">
         <p><strong>Categoría: </strong>{category} <i class="fa-solid fa-layer-group"></i></p>
@@ -17,7 +17,7 @@ const { title, category, platforms, description, website, row } = Astro.props
         <button>Ir al sitio oficial</button>
       </a></p>
     </div>
-    <div class="image">
+    <div class="image scroll-element">
       <slot />
     </div>
   </div>
@@ -109,19 +109,3 @@ const { title, category, platforms, description, website, row } = Astro.props
     }
   }
 </style>
-
-<script>
-  window.addEventListener("scroll", () => {
-    var element = document.querySelectorAll(".card-content")
-
-    element.forEach(element => {
-      var position = element.getBoundingClientRect()
-      if (position.top < window.innerHeight && position.bottom >= 0) {
-      element.classList.add("visible")
-    } else {
-      element.classList.remove("visible")
-    }
-    });
-
-  })
-</script>
